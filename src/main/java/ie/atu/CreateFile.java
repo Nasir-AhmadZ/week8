@@ -1,29 +1,36 @@
 package ie.atu;
-import java.io.File;
+import java.util.*;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class CreateFile {
-    public static void main(String[] args) {
-        //Specify the file name
-        String fileName = "File13.txt";
+    public static void main(String[] args)
+            throws IOException
+    {
 
-        // Create a file object
-        File myFile = new File(fileName);
+            // Creating a new string to put in the file
+            String str="newer text";
+            try
+            {
+                // attaching a file to FileWriter
+                FileWriter fw = new FileWriter("C:\\Users\\G00419630@atu.ie\\IdeaProjects\\week8\\File13.txt",true);
 
-        try {
-            // Create a new file on the disk
-            if (myFile.createNewFile()) {
-                System.out.println("File created successefully at " + myFile.getAbsolutePath());
-            } else {
-                System.out.println("File already exists at " + myFile.getAbsolutePath());
+                //read each character from the string and write into FileWriter
+                for (int i = 0;i<str.length();i++)
+                    fw.write(str.charAt(i));
+
+                System.out.println("Successfully written");
+
+                // close the file
+                fw.close();
             }
-        } catch (IOException e) {
-            System.out.println("An error occurred while creating the file");
-            e.printStackTrace();
-        }
+            catch (Exception e)
+            {
+                e.getStackTrace();
+            }
 
     }
 }
