@@ -12,7 +12,7 @@ public class CreateFile {
     {
 
             // Creating a new string to put in the file
-            String str="Testing";
+            String str="ne code";
             try
             {
                 // attaching a file to FileWriter
