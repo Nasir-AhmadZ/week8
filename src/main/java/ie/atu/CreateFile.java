@@ -12,11 +12,11 @@ public class CreateFile {
     {
 
             // Creating a new string to put in the file
-            String str="ne code";
+            String str="newer text";
             try
             {
                 // attaching a file to FileWriter
-                FileWriter fw = new FileWriter("C:\\Users\\G00419630@atu.ie\\IdeaProjects\\week8\\File13.txt");
+                FileWriter fw = new FileWriter("C:\\Users\\G00419630@atu.ie\\IdeaProjects\\week8\\File13.txt",true);
 
                 //read each character from the string and write into FileWriter
                 for (int i = 0;i<str.length();i++)
